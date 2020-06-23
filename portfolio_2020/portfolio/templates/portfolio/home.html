@@ -1,0 +1,318 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Jan Bertlik - Freelance Web Developer</title>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" type="text/css" href="{% static '/portfolio/css/styles.css' %}">
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">Welcome</a><button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Projects</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Skills</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Avatar Image--><img class="masthead-avatar mb-5" src="/media/me.png" alt="" /><!-- Masthead Heading-->
+                <h1 class="masthead-heading text-uppercase mb-0">Jan Bertlik</h1>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-circle"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0">Freelance Web Developer</p>
+            </div>
+        </header>
+        <!-- Portfolio Section-->
+        <section class="page-section portfolio" id="portfolio">
+            <div class="container">
+                <!-- Portfolio Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Projects</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-circle"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Grid Items-->
+                <div class="row">
+                    <!-- Portfolio Item 1-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="/media/wiki_site.png" alt="" />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 2-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="/media/portfolio_2019.png" alt="" />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 3-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="/media/where_to.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section-->
+        <section class="page-section bg-primary text-white mb-0" id="about">
+            <div class="container">
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white">Skills</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-circle"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- About Section Content-->
+                <div class="row">
+                    <aside class="skills aside section">
+                        <div class="section-inner shadow-sm rounded">
+                            <!-- <h2 class="heading">Skills</h2> -->
+                            <div class="content">
+                                <p class="intro" style="text-align: center;">
+                                    Below are my primary skills I use day-to-day. I built this site and my wiki page in Django. It is my preffered framework for web development. I am currently studying for the Sec+ CompTIA certificate program where I am learning about networking related information. Linux is a hobby of mine.</p>
+
+                                <div class="skillset">
+
+                                    <div class="item">
+                                        <h3 class="my-skills font-weight-light mb-0" style="text-align: center;">Python &amp; Django</h3>
+                                        <div class="level-bar">
+                                            <div class="skills django" data-level="40%">50%
+                                            </div>
+                                        </div><!--//level-bar-->
+                                    </div><!--//item-->
+
+                                    <div class="item">
+                                        <h3 class="my-skills font-weight-light mb-0" style="text-align: center;">Linux &amp; Networking</h3>
+                                        <div class="level-bar">
+                                            <div class="skills linux" data-level="20%">30%
+                                            </div>
+                                        </div><!--//level-bar-->
+                                    </div><!--//item-->
+
+                                    <div class="item">
+                                        <h3 class="my-skills font-weight-light mb-0" style="text-align: center;">Ruby on Rails</h3>
+                                        <div class="level-bar">
+                                            <div class="skills ruby" data-level="50%">40%
+                                            </div>
+                                        </div><!--//level-bar-->
+                                    </div><!--//item-->
+
+                                    <div class="item">
+                                        <h3 class="my-skills font-weight-light mb-0" style="text-align: center;">HTML5, CSS3, &amp; SQL</h3>
+                                        <div class="level-bar">
+                                            <div class="skills html" data-level="75%">75%
+                                            </div>
+                                        </div><!--//level-bar-->
+                                    </div><!--//item-->
+
+                                    <p style="text-align: center; margin: 25px;"><a href="https://github.com/JBert9000" target="_blank"><i class="fas fa-external-link-alt"></i>More on GitHub</a></p>
+                                </div>
+                            </div><!--//content-->
+                        </div><!--//section-inner-->
+                    </aside><!--//section-->
+                </div>
+                <!-- About Section Button-->
+                <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" href="{{ media }}/media/Jan Bertlik - CV.pdf"><i class="fas fa-download mr-2"></i>Download My Reusme</a>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <!-- Contact Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-circle"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+
+
+                <form method="POST" enctype="multipart/form-data" action=".">
+                    {% csrf_token %}
+                    <fieldset class="control-group">
+                         {{ form|crispy }}
+                    </fieldset>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-xl" type="submit" value="submit">Send</button>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Location</h4>
+                        <p class="lead mb-0">Wrocław,<br />Poland</p>
+                    </div>
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Find Me Here</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="http://www.linkedin.com/in/john-bertlik" target="_blank"><i class="fab fa-fw fa-linkedin-in"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://github.com/JBert9000" target="_blank"><i class="fab fa-github" href="#"></i></a><a class="btn btn-outline-light btn-social mx-1" href="mailto:jbertlik@gmail.com"><i class="fa fa-envelope"></i></a>
+                    </div>
+                    <!-- Footer About Text-->
+                    <div class="col-lg-4">
+                        <h4 class="text-uppercase mb-4">Got Any Questions?</h4>
+                        <p class="lead mb-0">Feel free to give me a shout <a href="mailto:jbertlik@gmail.com">here</a>, or fill out the contact form above.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>Copyright © Jan Bertlik 2020</small></div>
+        </div>
+        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+        <div class="scroll-to-top d-lg-none position-fixed">
+            <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+        <!-- Portfolio Modals--><!-- Portfolio Modal 1-->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                    </button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal1Label">Wiki Site</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-circle"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="/media/wiki_site.png" alt="" /><!-- Portfolio Modal - Text-->
+                                    <p class="mb-5">I built a simple CRUD Wiki application from scratch in Django. Users can create posts and edit them. There is no log in required to post, but i have disabled deleting for anyone other than the admin (me). Click the link below to look at this project, or view it's source code.</p>
+                                    <button class="btn btn-primary" data-dismiss="modal" onclick="window.open('https://wikipage.herokuapp.com/wiki/','_blank')"><i class="fa fa-hand-pointer"></i> Take a look</button>
+                                    <button class="btn btn-primary" data-dismiss="modal" onclick="window.open('https://github.com/JBert9000/wiki','_blank')"><i class="fa fa-code"></i> Source Code</button>
+                                    <button class="btn btn-primary" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 2-->
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                    </button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                              <div class="col-lg-8">
+                                  <!-- Portfolio Modal - Title-->
+                                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal1Label">Portfolio Page 2019</h2>
+                                  <!-- Icon Divider-->
+                                  <div class="divider-custom">
+                                      <div class="divider-custom-line"></div>
+                                      <div class="divider-custom-icon"><i class="fas fa-circle"></i></div>
+                                      <div class="divider-custom-line"></div>
+                                  </div>
+                                  <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="/media/portfolio_2019.png" alt="" /><!-- Portfolio Modal - Text-->
+                                  <p class="mb-5">In the later half of 2019 I built this portfolio site in Flask. It is a simple blog web app and has CRUD funtionality. I added a few things into this site such as a Tetris game made in Javascript, live updating graphs for 2 stock charts, and a download of my resume.</p>
+                                  <button class="btn btn-primary" data-dismiss="modal" onclick="window.open('https://janbertlik.herokuapp.com','_blank')"><i class="fa fa-hand-pointer"></i> Take a Look</button>
+                                  <button class="btn btn-primary" data-dismiss="modal" onclick="window.open('https://github.com/JBert9000/flask_portfolio','_blank')"><i class="fa fa-code"></i> Source Code</button>
+                                  <button class="btn btn-primary" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 3-->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal3Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                    </button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                              <div class="col-lg-8">
+                                  <!-- Portfolio Modal - Title-->
+                                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal1Label">Where To?</h2>
+                                  <!-- Icon Divider-->
+                                  <div class="divider-custom">
+                                      <div class="divider-custom-line"></div>
+                                      <div class="divider-custom-icon"><i class="fas fa-circle"></i></div>
+                                      <div class="divider-custom-line"></div>
+                                  </div>
+                                  <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="/media/where_to.png" alt="" /><!-- Portfolio Modal - Text-->
+                                  <p class="mb-5">This was the final project at my time at Bitmaker Labs Toronto (12 week web developement boot-camp).
+
+Uploaded to Heroku and made with Ruby on Rails, this app's main idea was to pick a destination to travel to based on the popularity of the top 5 countries to visit in each month.
+
+This idea was chosen so that we could call Google Maps API and populate our data through that. We seeded our data (months, countries) one time with a schema, and called Google Maps for the hotels for more detialed information.</p>
+                                <button class="btn btn-primary" data-dismiss="modal" onclick="window.open('http://where-to-travel.herokuapp.com/','_blank')"><i class="fa fa-hand-pointer"></i> Take a Look</button>
+                                <button class="btn btn-primary" data-dismiss="modal" onclick="window.open('https://github.com/behrami/bitmaker-travel-edu','_blank')"><i class="fa fa-code"></i> Source Code</button>
+                                <button class="btn btn-primary" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://kit.fontawesome.com/470f73359b.js" crossorigin="anonymous"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'portfolio/js/scripts.js' %}"></script>
+    </body>
+</html>
