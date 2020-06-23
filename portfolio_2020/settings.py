@@ -14,7 +14,7 @@ SECRET_KEY = os.environ.get('PORTFOLIO_2020')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost','https://janb.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', 'janb.herokuapp.com']
 
 
 # Application definition

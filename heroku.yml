@@ -2,4 +2,6 @@ build:
   docker:
     web: Dockerfile
 run:
-  web: bundle exec puma -C config/puma.rb
+  web: gunicorn portfolio_2020.wsgi
+
+  # bundle exec puma -C config/puma.rb
