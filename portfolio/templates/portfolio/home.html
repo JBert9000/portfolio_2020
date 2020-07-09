@@ -33,7 +33,7 @@
         <!-- Masthead-->
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Avatar Image--><img class="masthead-avatar mb-5" src="/media/me.png" alt="" /><!-- Masthead Heading-->
+                <!-- Masthead Avatar Image--><img class="masthead-avatar mb-5" src="{% static '/portfolio/media/me.png' %}" alt="" /><!-- Masthead Heading-->
                 <h1 class="masthead-heading text-uppercase mb-0">Jan Bertlik</h1>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider">
@@ -64,7 +64,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="/media/wiki_site.png" alt="" />
+                            <img class="img-fluid" src="{% static '/portfolio/media/wiki_site.png' %}" alt="/media/wiki_site.png" />
                         </div>
                     </div>
                     <!-- Portfolio Item 2-->
@@ -73,7 +73,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="/media/portfolio_2019.png" alt="" />
+                            <img class="img-fluid" src="{% static '/portfolio/media/portfolio_2019.png' %}" alt="/media/portfolio_2019.png" />
                         </div>
                     </div>
                     <!-- Portfolio Item 3-->
@@ -82,7 +82,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="/media/where_to.png" alt="" />
+                            <img class="img-fluid" src="{% static '/portfolio/media/where_to.png' %}" alt="/media/where_to.png" />
                         </div>
                     </div>
                 </div>
@@ -150,7 +150,8 @@
                 </div>
                 <!-- About Section Button-->
                 <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" href="{{ media }}/media/Jan Bertlik - CV.pdf"><i class="fas fa-download mr-2"></i>Download My Reusme</a>
+                    <!-- {{ media }}/media/Jan Bertlik - CV.pdf -->
+                    <a class="btn btn-xl btn-outline-light" href="{% static '/portfolio/media/Jan Bertlik - CV.pdf' %}"><i class="fas fa-download mr-2"></i>Download My Reusme</a>
                 </div>
             </div>
         </section>
@@ -228,7 +229,7 @@
                                         <div class="divider-custom-icon"><i class="fas fa-circle"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="/media/wiki_site.png" alt="" /><!-- Portfolio Modal - Text-->
+                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="{% static '/portfolio/media/wiki_site.png' %}" alt="/media/wiki_site.png" /><!-- Portfolio Modal - Text-->
                                     <p class="mb-5">I built a CRUD Wiki application from scratch in Django. Users can create, edit, delete, and search for posts. All uploaded images are stored via AWS S3. There is no log in required to post. Click the link below to look at this project, or view it's source code.</p>
                                     <button class="btn btn-primary" data-dismiss="modal" onclick="window.open('https://wikipage.herokuapp.com/wiki/','_blank')"><i class="fa fa-hand-pointer"></i> Take a look</button>
                                     <button class="btn btn-primary" data-dismiss="modal" onclick="window.open('https://github.com/JBert9000/wiki','_blank')"><i class="fa fa-code"></i> Source Code</button>
@@ -259,7 +260,7 @@
                                       <div class="divider-custom-icon"><i class="fas fa-circle"></i></div>
                                       <div class="divider-custom-line"></div>
                                   </div>
-                                  <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="/media/portfolio_2019.png" alt="" /><!-- Portfolio Modal - Text-->
+                                  <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="{% static '/portfolio/media/portfolio_2019.png' %}" alt="/media/portfolio_2019.png" /><!-- Portfolio Modal - Text-->
                                   <p class="mb-5">In the later half of 2019 I built this portfolio site in Flask. It is a simple blog web app and has CRUD funtionality. I added a few things into this site such as a Tetris game made in Javascript, live updating graphs for 2 stock charts, and a download of my resume.</p>
                                   <button class="btn btn-primary" data-dismiss="modal" onclick="window.open('https://janbertlik.herokuapp.com','_blank')"><i class="fa fa-hand-pointer"></i> Take a Look</button>
                                   <button class="btn btn-primary" data-dismiss="modal" onclick="window.open('https://github.com/JBert9000/flask_portfolio','_blank')"><i class="fa fa-code"></i> Source Code</button>
@@ -290,7 +291,7 @@
                                       <div class="divider-custom-icon"><i class="fas fa-circle"></i></div>
                                       <div class="divider-custom-line"></div>
                                   </div>
-                                  <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="/media/where_to.png" alt="" /><!-- Portfolio Modal - Text-->
+                                  <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="{% static '/portfolio/media/where_to.png' %}" alt="/media/where_to.png" /><!-- Portfolio Modal - Text-->
                                   <p class="mb-5">This was the final project at my time at Bitmaker Labs Toronto (12 week web developement boot-camp).
 
 Uploaded to Heroku and made with Ruby on Rails, this app's main idea was to pick a destination to travel to based on the popularity of the top 5 countries to visit in each month.
@@ -313,6 +314,6 @@ This idea was chosen so that we could call Google Maps API and populate our data
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <script src="https://kit.fontawesome.com/470f73359b.js" crossorigin="anonymous"></script>
         <!-- Core theme JS-->
-        <script src="{% static 'portfolio/js/scripts.js' %}"></script>
+        <script src="{% static '/portfolio/js/scripts.js' %}"></script>
     </body>
 </html>

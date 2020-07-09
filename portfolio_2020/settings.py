@@ -1,5 +1,5 @@
 import os
-import django_heroku
+# import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -12,6 +12,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('PORTFOLIO_2020')
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# DEBUG = int(os.environ.get('DEBUG', default=0))
 DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', 'janb.herokuapp.com']
@@ -26,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    "whitenoise.runserver_nostatic",
     'django.contrib.staticfiles',
     'crispy_forms',
 ]
@@ -114,22 +116,27 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'portfolio_2020.storage.WhiteNoiseStaticFilesStorage'
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
-STATIC_TMP = os.path.join(BASE_DIR, 'static')
+# STATIC_TMP = os.path.join(BASE_DIR, 'static')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
-os.makedirs(STATIC_TMP, exist_ok=True)
-os.makedirs(STATIC_ROOT, exist_ok=True)
-
+# os.makedirs(STATIC_TMP, exist_ok=True)
+# os.makedirs(STATIC_ROOT, exist_ok=True)
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
+MEDIA_URL = 'media/'
 
 # Additional locations of static files
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
+COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)
+
+DEBUG_PROPAGATE_EXCEPTIONS = True
 
 # Additional locations of static files
 # STATICFILES_DIRS = (
@@ -189,4 +196,7 @@ LOGGING = {
 }
 
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
+# ./manage.py findstatic css/styles.css --verbosity=2
+
+del STATICFILES_STORAGE
